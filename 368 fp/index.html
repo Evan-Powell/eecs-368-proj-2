@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect4(beta)</title>
+    <style>
+        .header {
+           padding: 0px;
+           text-align:center;
+           background-color:blue; 
+           opacity: .6;
+           color:crimson;
+           font-size: 30px;
+        }
+        .container {
+            height: 1200px;
+            width: 1200px;
+            margin: 2rem auto;
+            border: 1px solid black;
+            border-radius: 5px;
+            display:grid;
+            box-shadow: 0 1px 3px black;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-row: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 3px 3px;
+            background-color: gold;
+        }
+        .cell {
+            color:darkblue;
+            background-color:white;
+            font-size: 3rem;
+            text-align: center;
+            display: table-cell;
+            border-radius: 30%;
+            -webkit-border-radius: 50%;
+            margin: 2px;
+
+        }
+        span.a {
+            display: inline;
+            width: 60px;
+            height: 30px;
+            padding: 5px;
+            border: 1px solid black;
+            background-color: red;
+            text-emphasis-color: blue;
+            position: fixed;
+            top: 215px;
+            left: 10px;
+        }
+        span.b {
+            display: inline;
+            width: 60px;
+            height: 30px;
+            padding: 5px;
+            border: 1px solid black;
+            background-color: blue;
+            text-emphasis-color: blue;
+            position: fixed;
+            top: 215px;
+            left: 100px  
+        }
+        span.c {
+            display: inline;
+            width: 160px;
+            height: 60px;
+            padding: 5px;
+            border: 1px solid black;
+            background-color: white;
+            text-emphasis-color: blue;
+            position: fixed;
+            top: 300px;
+            left: 10px  
+        }
+        .button{
+            position: fixed;
+            margin-top: -1000px;
+            margin-right: 50px;
+            float: top;
+        }
+    </style>
+</head>
+<body>
+    <div class = "header">
+        <h1>
+            Connect (Three + One) (10x10)
+        </h1>
+
+    </div>
+    <div class = "container">
+        <div class = "cell cell-00 col-0" ></div>
+        <div class = "cell cell-01 col-1" ></div>
+        <div class = "cell cell-02 col-2" ></div>
+        <div class = "cell cell-03 col-3" ></div>
+        <div class = "cell cell-04 col-4" ></div>
+        <div class = "cell cell-05 col-5" ></div>
+        <div class = "cell cell-06 col-6" ></div>
+        <div class = "cell cell-07 col-7"></div>
+        <div class = "cell cell-08 col-8"></div>
+        <div class = "cell cell-09 col-9"></div>
+        <div class = "cell cell-10 col-0"></div>
+        <div class = "cell cell-11 col-1"></div>
+        <div class = "cell cell-12 col-2"></div>
+        <div class = "cell cell-13 col-3"></div>
+        <div class = "cell cell-14 col-4"></div>
+        <div class = "cell cell-15 col-5"></div>
+        <div class = "cell cell-16 col-6"></div>
+        <div class = "cell cell-17 col-7"></div>
+        <div class = "cell cell-18 col-8"></div>
+        <div class = "cell cell-19 col-9"></div>
+        <div class = "cell cell-20 col-0"></div>
+        <div class = "cell cell-21 col-1"></div>
+        <div class = "cell cell-22 col-2"></div>
+        <div class = "cell cell-23 col-3"></div>
+        <div class = "cell cell-24 col-4"></div>
+        <div class = "cell cell-25 col-5"></div>
+        <div class = "cell cell-26 col-6"></div>
+        <div class = "cell cell-27 col-7"></div>
+        <div class = "cell cell-28 col-8"></div>
+        <div class = "cell cell-29 col-9"></div>
+        <div class = "cell cell-30 col-0"></div>
+        <div class = "cell cell-31 col-1"></div>
+        <div class = "cell cell-32 col-2"></div>
+        <div class = "cell cell-33 col-3"></div>
+        <div class = "cell cell-34 col-4"></div>
+        <div class = "cell cell-35 col-5"></div>
+        <div class = "cell cell-36 col-6"></div>
+        <div class = "cell cell-37 col-7"></div>
+        <div class = "cell cell-38 col-8"></div>
+        <div class = "cell cell-39 col-9"></div>
+        <div class = "cell cell-40 col-0"></div>
+        <div class = "cell cell-41 col-1"></div>
+        <div class = "cell cell-42 col-2"></div>
+        <div class = "cell cell-43 col-3"></div>
+        <div class = "cell cell-44 col-4"></div>
+        <div class = "cell cell-45 col-5"></div>
+        <div class = "cell cell-46 col-6"></div>
+        <div class = "cell cell-47 col-7"></div>
+        <div class = "cell cell-48 col-8"></div>
+        <div class = "cell cell-49 col-9"></div>
+        <div class = "cell cell-50 col-0"></div>
+        <div class = "cell cell-51 col-1"></div>
+        <div class = "cell cell-52 col-2"></div>
+        <div class = "cell cell-53 col-3"></div>
+        <div class = "cell cell-54 col-4"></div>
+        <div class = "cell cell-55 col-5"></div>
+        <div class = "cell cell-56 col-6"></div>
+        <div class = "cell cell-57 col-6"></div>
+        <div class = "cell cell-58 col-7"></div>
+        <div class = "cell cell-59 col-8"></div>
+        <div class = "cell cell-60 col-9"></div>
+        <div class = "cell cell-61 col-1"></div>
+        <div class = "cell cell-62 col-2"></div>
+        <div class = "cell cell-63 col-3"></div>
+        <div class = "cell cell-64 col-4"></div>
+        <div class = "cell cell-65 col-5"></div>
+        <div class = "cell cell-66 col-6"></div>
+        <div class = "cell cell-67 col-7"></div>
+        <div class = "cell cell-68 col-8"></div>
+        <div class = "cell cell-69 col-9"></div>
+        <div class = "cell cell-70 col-0"></div>
+        <div class = "cell cell-71 col-1"></div>
+        <div class = "cell cell-72 col-2"></div>
+        <div class = "cell cell-73 col-3"></div>
+        <div class = "cell cell-74 col-4"></div>
+        <div class = "cell cell-75 col-5"></div>
+        <div class = "cell cell-76 col-6"></div>
+        <div class = "cell cell-77 col-7"></div>
+        <div class = "cell cell-78 col-8"></div>
+        <div class = "cell cell-79 col-9"></div>
+        <div class = "cell cell-80 col-0"></div>
+        <div class = "cell cell-81 col-1"></div>
+        <div class = "cell cell-82 col-2"></div>
+        <div class = "cell cell-83 col-3"></div>
+        <div class = "cell cell-84 col-4"></div>
+        <div class = "cell cell-85 col-5"></div>
+        <div class = "cell cell-86 col-6"></div>
+        <div class = "cell cell-87 col-7"></div>
+        <div class = "cell cell-88 col-8"></div>
+        <div class = "cell cell-89 col-9"></div>
+        <div class = "cell cell-90 col-0"></div>
+        <div class = "cell cell-91 col-1"></div>
+        <div class = "cell cell-92 col-2"></div>
+        <div class = "cell cell-93 col-3"></div>
+        <div class = "cell cell-94 col-4"></div>
+        <div class = "cell cell-95 col-5"></div>
+        <div class = "cell cell-96 col-6"></div>
+        <div class = "cell cell-97 col-7"></div>
+        <div class = "cell cell-98 col-8"></div>
+        <div class = "cell cell-99 col-9"></div>
+    </div>
+    <span class="a">Player 1 is red</span>
+    <span class="b">Player 2 is blue</span>
+    <span class="c">
+        <div id = "infoDisplay"></div>
+    </span>
+    <div>
+        <button class = "button" onclick="refresh()">Refresh</button>
+    </div>
+    <script src="connect4.js"></script>
+</body>
+</html>
